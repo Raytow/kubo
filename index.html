@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>音乐播放器</title>
+<meta name="keywords" content="音乐播放器" />
+<meta name="description" content="html5音乐播放器支持列表连播功能，这是一款html5音乐播放器，支持列表连播功能(jQuery音乐mp3播放器界面超赞)。界面很精致，音量调节，播放进度功有，基于jquery-1.11.1.min.js制作。" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<!-- 代码 开始 -->
+<div class="audio-main w3ls">
+	<div class="audio-record-list">
+	<div class="profile">
+			 <div class="profile-top wthree">
+				 <div class="pic-sec">
+					 <div class="pic">
+						 <img src="images/t3.jpg" alt=""/>
+					 </div>
+					 <div class="pic_info">
+						 <h2>音乐播放器</h2>
+						 <h3><a href="https://www.google.com" target="_blank">www.google.com</a></h3>
+					 </div>
+					 <div class="clear"></div>
+				 </div>
+				 <div class="media">
+<!-- 					 <div class="tweet">
+						 <h4>2,302</h4>
+						 <h5>Tweets</h5>
+					 </div>
+					 <div class="follow">
+						 <h4>132</h4>
+						 <h5>Following</h5>
+					 </div>
+					 <div class="follow2">
+						  <h4>35,650</h4>
+						 <h5>Followers</h5>
+					 </div> -->
+					 <div class="clear"></div>
+				 </div>
+			 </div>
+		 </div>
+		<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+			<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+				<div class="jp-type-playlist">
+					<div class="jp-gui jp-interface">
+						<div class="jp-controls">	
+							<button class="jp-play" role="button" tabindex="0">play</button>
+						</div>
+						<div class="jp-progress">
+							<div class="jp-seek-bar">
+								<div class="jp-play-bar"></div>
+							</div>
+						</div>
+						<div class="jp-volume-controls">
+							<button class="jp-mute" role="button" tabindex="0">mute</button>
+							<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+						</div>
+						<div class="jp-time-holder">
+							<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+							<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+						</div>
+						
+					</div>
+					<div class="jp-playlist">
+						<ul>
+							<li>&nbsp;</li>
+						</ul>
+					</div>
+					<div class="jp-no-solution">
+						<span>Update Required</span>
+						To play the media you will need to either update your browser to a recent version or update your <a href="http://www.52player.com/MusicPlayer/" target="_blank">Flash plugin</a>.
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+<link href="css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_1",
+		cssSelectorAncestor: "#jp_container_1"
+	}, [
+		
+		{
+			title:"抖音神曲",
+			mp3:"./music/v.webm",
+			oga:"./music/v.webm"
+		},
+		{
+			title:"经典每人一首",
+			mp3:"./music/m.m4a",
+			oga:"./music/m.m4a"
+		},
+		{
+			title:"晚风",
+			mp3:"./music/晚风.mp3",
+			oga:"./music/晚风.mp3"
+		}
+	], {
+		swfPath: "../../dist/jplayer",
+		supplied: "oga, mp3",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true
+	});
+});
+</script>
+<!-- 代码 结束 -->
+
+<!-- <div style="text-align:center;padding-top:20px;">
+<p><a href="http://www.52player.com/MusicPlayer/" target="_blank" style="color:#ffffff;">音乐播放器</a></p>
+</div>
+<div style="display:none;">
+<script src="http://s20.cnzz.com/stat.php?id=3992412&web_id=3992412&show=pic" language="JavaScript"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9d2f00b533f9cca146f784443e5bfc96";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> -->
+</div>
+</body>
+</html>
